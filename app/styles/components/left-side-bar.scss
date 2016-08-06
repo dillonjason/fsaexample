@@ -1,3 +1,31 @@
 .left-side-bar-container {
   margin-top: $general-margin;
+  border-right: 1px solid $text-dark-dividers;
+
+  .title {
+    font-size: 24px;
+    color: $text-dark;
+    text-align: center;
+  }
+
+  .specialLink {
+    margin-top: $general-margin;
+    font-size: 20px;
+    color: $accent;
+    text-align: center;
+    display: block;
+
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-left: $general-margin;
+      margin-right: $general-margin;
+      text-align: center;
+    }
+  }
 }

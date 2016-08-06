@@ -1,0 +1,65 @@
+.link-with-panel-container {
+  position: relative;
+
+  .primary-link {
+    text-decoration: none;
+    color: $text-dark;
+    padding: 5px 10px;
+    line-height: 2;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $white;
+    box-shadow: $shadow-level-1;
+
+    .primary-link {
+      //color: $white;
+    }
+  }
+
+  .panel {
+    width: 700px;
+    position: absolute;
+    background-color: $white;
+    padding: $general-margin;
+    left: calc(100% - 1px);
+    top: -100%;
+    box-shadow: $shadow-level-1;
+
+    h2 {
+      margin-top: 0;
+      text-align: left;
+
+      a {
+        color: $text-dark;
+        text-decoration: none;
+
+      }
+    }
+
+    h4 {
+      color: $text-dark-secondary;
+      text-align: left;
+    }
+
+    .eligible-items a, .prescription-items a {
+      text-align: left;
+      margin-bottom: $general-margin;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .eligible-items a {
+      color: $accent;
+
+    }
+
+    .prescription-items a {
+      color: $prescriptionBlue;
+    }
+  }
+}
