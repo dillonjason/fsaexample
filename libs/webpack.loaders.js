@@ -9,12 +9,17 @@ exports.styleLoaders = function(paths) {
                 {
                     test: /\.css$/,
                     loaders: ['style', 'css'],
-                    include: paths
+                    include: paths.styles
                 },
                 {
                     test: /\.s(c|a)ss$/,
-                    loaders: ['style', 'css', 'sass'],
-                    include: paths
+                    loaders: ["style", "css?sourceMap!sass?sourceMap"],
+                    include: paths.styles
+                },
+                {
+                    test: /\.(jpg|png)$/,
+                    loader: 'file?name=[path][name].[hash].[ext]',
+                    include: paths.images
                 }
             ]
         }
@@ -27,13 +32,18 @@ exports.styleExtracts = function(paths) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css'),
-                    include: paths
+                    loader: ExtractTextPlugin.extract('style', 'css!postcss'),
+                    include: paths.styles
                 },
                 {
                     test: /\.s(c|a)ss$/,
-                    loader: ExtractTextPlugin.extract('style', 'css', 'sass'),
-                    include: paths
+                    loader: ExtractTextPlugin.extract("style", "css!postcss!sass"),
+                    include: paths.styles
+                },
+                {
+                    test: /\.(jpg|png)$/,
+                    loader: 'file?name=[path][name].[hash].[ext]',
+                    include: paths.images
                 }
             ]
         },
