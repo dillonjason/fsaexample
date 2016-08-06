@@ -48,9 +48,13 @@
 
   .pure-menu-link {
     color: $text-light;
-    padding: 38px;
+    padding: 26px;
     transition: padding $general-speed ease-in-out;
     transform: translateZ(0);
+
+    .material-icons {
+      display: block;
+    }
 
     &:hover {
       background-color: $primary;
