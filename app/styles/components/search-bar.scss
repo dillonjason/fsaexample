@@ -3,6 +3,7 @@
   width: 100%;
   background-color: $primary-dark;
   padding: $general-margin 0;
+  top: $general-margin * -1;
 
   .dynamic-select-container {
     float: left;

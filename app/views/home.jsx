@@ -1,7 +1,12 @@
+import SearchBar from '../components/search-bar'
+import DeptDirectory from '../components/dept-directory'
+
 class Home extends React.Component {
     render() {
         return (
-            <div>
+            <div className="home-container">
+                <SearchBar />
+                <DeptDirectory />
             </div>
         );
     }

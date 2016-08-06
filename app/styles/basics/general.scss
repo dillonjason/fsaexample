@@ -5,6 +5,8 @@ body {
 
 .content-wrapper {
   position: relative;
-  top: $menu-height;
-  margin: $general-margin;
+
+  .content {
+    margin-top: $general-margin;
+  }
 }
