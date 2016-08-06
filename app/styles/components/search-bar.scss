@@ -1,0 +1,59 @@
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  background-color: $primary-dark;
+  padding: $general-margin 0;
+
+  .dynamic-select-container {
+    float: left;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .search-bar-width-restrict {
+    margin: auto;
+    width: 1000px;
+  }
+
+  .input-container {
+    position: relative;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .input {
+      position: relative;
+      background: $white;
+      height: $search-height + 2px;
+
+      input {
+        height: $search-height;
+        padding: 1px;
+        padding-left: 5px;
+        border: 0;
+        width: calc(100% - 2px);
+        outline: none;
+      }
+    }
+
+  }
+
+  .button-container {
+    position: relative;
+    width: auto;
+    display: inline;
+    float: right;
+
+    button {
+      padding: 9px 1em;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+
+      background-color: $accent;
+      color: $text-light;
+      font-weight: bold;
+    }
+  }
+}
