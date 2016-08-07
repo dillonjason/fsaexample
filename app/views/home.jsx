@@ -5,6 +5,8 @@ import Carousel from 'nuka-carousel'
 import Divider from '../components/divider'
 import CardList from '../components/card-list'
 import TopSellerSummary from '../components/top-seller-summary'
+import Tabs from '../components/tabs'
+import {Link} from 'react-router'
 
 import Banner from '../images/banner.jpg'
 import Antiseptic from '../images/top-sellers/antiseptic.jpg'
@@ -22,6 +24,10 @@ class Home extends React.Component {
         return (
             <div className="home-container">
                 <SearchBar />
+                <Tabs>
+                    <Link to="/" className="active">Primary Store</Link>
+                    <Link to="/Optics">Optics Store</Link>
+                </Tabs>
 
                 <div className="pure-g">
                     <div className="pure-u-1-6">

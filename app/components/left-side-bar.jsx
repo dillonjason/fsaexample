@@ -41,7 +41,7 @@ LeftSideBar.propTypes = {
         React.PropTypes.shape({
             name: React.PropTypes.string.isRequired,
             to: React.PropTypes.string.isRequired,
-            subItems: React.PropTypes.array
+            subItems: React.PropTypes.object
         }).isRequired
     ).isRequired
 };

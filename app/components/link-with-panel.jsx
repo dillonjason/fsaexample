@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import Divider from './divider'
 
 class LinkWithPanel extends React.Component {
     showPanel = () => {
@@ -40,9 +41,6 @@ class LinkWithPanel extends React.Component {
                 showPresription = true;
         }
 
-        console.log(this.props.name);
-        console.log(this.props.panelItems);
-
         return(
             <div className="link-with-panel-container" onMouseOver={this.showPanel} onMouseLeave={this.hidePanel}>
                 <Link to={this.props.to} onTouchStart={this.togglePanel} className="primary-link">{this.props.name}</Link>
@@ -60,9 +58,9 @@ class LinkWithPanel extends React.Component {
                             </div>
                         }
 
-                        { showEligible && showPresription && <div className="divider"></div> }
+                        { showEligible && showPresription && <Divider /> }
 
-                        {showEligible &&
+                        {showPresription &&
                             <div className="prescription-items">
                                 <h4>
                                     Products only reimbursed with prescription

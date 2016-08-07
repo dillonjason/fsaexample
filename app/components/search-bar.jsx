@@ -1,6 +1,10 @@
 import DynamicSelect from './dynamic-select'
 
 class SearchBar extends React.Component {
+    componentDidMount() {
+        
+    }
+
     render() {
         return(
             <div className="search-bar-container">
