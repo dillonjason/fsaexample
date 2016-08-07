@@ -1,0 +1,50 @@
+.right-side-bar-container {
+  margin-top: $general-margin;
+  border-left: 1px solid $text-dark-dividers;
+
+  .title {
+    font-size: 24px;
+    color: $text-dark;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-left: $general-margin;
+      margin-right: $general-margin;
+
+      a {
+        text-decoration: none;
+
+        .card-component .card:hover {
+          background-color: $primary;
+        }
+
+        .icon {
+          .material-icons {
+            font-size: 48px;
+          }
+        }
+
+        .text {
+          height: 52px;
+          line-height: 52px;
+          span {
+            vertical-align: middle;
+            display: inline-block;
+            line-height: normal;
+          }
+        }
+
+        .arrows {
+          font-size: 36px;
+          text-align: right;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

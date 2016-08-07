@@ -1,5 +1,10 @@
 import SearchBar from '../components/search-bar'
 import DeptDirectory from '../components/dept-directory'
+import FSATool from '../components/fsa-tool'
+import Carousel from 'nuka-carousel'
+import Divider from '../components/divider'
+
+import Banner from '../images/banner.jpg'
 
 class Home extends React.Component {
     render() {
@@ -12,12 +17,25 @@ class Home extends React.Component {
                         <DeptDirectory />
                     </div>
 
-                    <div className="pure-u-1-2 general-margin-left">
-                        <h2>Home</h2>
+                    <div className="pure-u-2-3">
+                        <div className="general-margin-sides">
+                            <div className="home-carousel">
+                                <Carousel>
+                                    <img src={Banner} />
+                                    <img src={Banner} />
+                                    <img src={Banner} />
+                                    <img src={Banner} />
+                                </Carousel>
+                            </div>
+
+                            <Divider
+                                title="Top Sellers"
+                            />
+                        </div>
                     </div>
 
-                    <div className="pure-1-4">
-
+                    <div className="pure-u-1-6">
+                        <FSATool />
                     </div>
                 </div>
 
