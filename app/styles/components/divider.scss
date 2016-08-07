@@ -1,0 +1,11 @@
+.divider-component {
+  .title {
+    margin-top: $general-margin;
+    margin-bottom: 5px;
+  }
+
+  .line {
+    width: 100%;
+    border-top: 1px solid $text-dark-dividers;
+  }
+}

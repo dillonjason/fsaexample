@@ -1,5 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
+}
+
 .content-wrapper {
   position: relative;
-  top: $menu-height;
-  margin: $general-margin;
+
+  .content {
+    margin-top: $general-margin;
+  }
+}
+
+.general-margin-left {
+  margin-left: $general-margin;
+}
+
+.general-margin-sides {
+  margin-left: $general-margin;
+  margin-right: $general-margin;
 }

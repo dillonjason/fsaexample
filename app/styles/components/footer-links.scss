@@ -1,0 +1,32 @@
+.footer-links-component {
+  color: $text-dark;
+
+  ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      span[class^='socicon-'] {
+        font-size: 15px;
+        color: $white;
+        background-color: $text-dark-secondary;
+        padding: 1px;
+        margin-left: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+        border-radius: $border-radius;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

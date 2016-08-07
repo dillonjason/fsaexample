@@ -1,0 +1,31 @@
+.top-seller-summary-component {
+  .title {
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: $general-margin;
+    font-weight: bold;
+  }
+
+  .strike {
+    text-decoration: line-through;
+  }
+
+  .our-price {
+    margin-bottom: 5px;
+  }
+
+  .fsa-approved {
+    color: $accent;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    background-color: $accent;
+    color: $white;
+    font-weight: bold;
+  }
+}

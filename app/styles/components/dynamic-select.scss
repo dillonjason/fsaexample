@@ -1,0 +1,31 @@
+.dynamic-select-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  .select-result {
+    background-color: $grey-light;
+    display: inline-block;
+    line-height: $search-height - 20px;
+    padding: 10px 5px;
+    cursor: pointer;
+    color: $text-dark-secondary;
+
+    .material-icons {
+      font-size: inherit;
+      line-height: inherit;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  select {
+    opacity: 0;
+    width: auto;
+    height: $search-height;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+}
