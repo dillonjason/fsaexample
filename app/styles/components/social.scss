@@ -1,0 +1,41 @@
+.social-component {
+  margin-bottom: $general-margin;
+  text-align: center;
+
+  .sign-up {
+    display: inline-block;
+
+    input {
+      width: 250px;
+      height: 27px;
+      padding: 1px;
+      line-height: normal;
+    }
+
+    button {
+      background-color: $accent;
+      color: $white;
+      font-weight: bold;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  .social-media {
+    display: inline-block;
+    .title {
+      color: $text-dark;
+      font-size: 24px;
+    }
+
+    span[class^='socicon-'] {
+      color: $white;
+      background-color: $text-dark-secondary;
+      padding: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+      cursor: pointer;
+      border-radius: $border-radius;
+    }
+  }
+}

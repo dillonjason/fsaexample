@@ -1,5 +1,7 @@
 import View from '../libs/view'
 import Navbar from '../components/nav/navbar'
+import Footer from '../components/footer'
+import Disclaimer from '../components/disclaimer'
 
 class Master extends React.Component {
     render() {
@@ -15,10 +17,11 @@ class Master extends React.Component {
                 />
                 
                 <div className="content-wrapper">
-                    
                     <div className="content">
                         {this.props.children}
                     </div>
+                    <Footer />
+                    <Disclaimer />
                 </div>
             </View>
         );
