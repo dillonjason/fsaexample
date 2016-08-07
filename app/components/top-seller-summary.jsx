@@ -8,7 +8,7 @@ class TopSellerSummary extends React.Component {
 
                 {this.props.listPrice !== 0 &&
                     <div className="list-price">
-                        List Price: $<span className="strike">{this.props.listPrice}</span>
+                        List Price: $<span className="strike">{parseFloat(this.props.listPrice).toFixed(2)}</span>
                     </div>
                 }
 
@@ -17,7 +17,7 @@ class TopSellerSummary extends React.Component {
                 }
 
                 <div className="our-price">
-                    Our Price: ${this.props.ourPrice}
+                    Our Price: ${parseFloat(this.props.ourPrice).toFixed(2)}
                 </div>
 
                 {this.props.isFSA &&
