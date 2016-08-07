@@ -26,6 +26,7 @@
     left: calc(100% - 1px);
     top: -100%;
     box-shadow: $shadow-level-1;
+    z-index: 1000;
 
     h2 {
       margin-top: 0;

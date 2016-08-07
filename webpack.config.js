@@ -16,6 +16,7 @@ const commonsChunkPlugin = require('./libs/webpack.commonschunkplugin');
 const cleanWebpackPlugin = require('./libs/webpack.clean');
 const purifyCSS = require('./libs/webpack.purifycss');
 const providePlugin = require('./libs/webpack.provideplugin');
+const postCSS = require('./libs/webpack.postcss');
 
 const webpack = require('webpack');
 
@@ -25,8 +26,10 @@ const PATHS = {
     app: path.resolve(__dirname, 'app'),
     style: [
         path.resolve(__dirname, 'app/main.scss'),
-        path.resolve(__dirname, 'node_modules/purecss')
+        path.resolve(__dirname, 'node_modules/purecss'),
+        path.resolve(__dirname, 'node_modules/purecss/build/grids-responsive.css')
     ],
+    images: path.resolve(__dirname, 'app/images'),
     build: path.resolve(__dirname, 'build')
 };
 
@@ -43,7 +46,7 @@ const common = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'index',
+            title: 'FSA Store',
             template: 'app/index-template.ejs'
         })
     ],
@@ -60,10 +63,11 @@ var config;
 
 switch(TARGET) {
     case 'build':
+    case 'postinstall':
     case 'stats':
         config = merge(common,
             loaders.es6Loader(PATHS.app),
-            loaders.styleExtracts(PATHS.style),
+            loaders.styleExtracts(PATHS),
             purifyCSS.purify([PATHS.app]),
             minify.minify(),
             definePlugin.setFreeVariable('process.env.NODE_ENV', 'production'),
@@ -75,13 +79,14 @@ switch(TARGET) {
                 name: 'vendor',
                 entries: Object.keys(pkg.dependencies)
             }),
+            postCSS.setPostCSS(),
             prodConfig.prodServer({PATHS})
         );
         break;
     default:
         config = merge(common,
             loaders.es6Loader(PATHS.app),
-            loaders.styleLoaders(PATHS.style),
+            loaders.styleLoaders(PATHS),
             providePlugin.setProvides({
                 React: 'react'
             }),
