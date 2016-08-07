@@ -10,3 +10,12 @@ body {
     margin-top: $general-margin;
   }
 }
+
+.general-margin-left {
+  margin-left: $general-margin;
+}
+
+.general-margin-sides {
+  margin-left: $general-margin;
+  margin-right: $general-margin;
+}

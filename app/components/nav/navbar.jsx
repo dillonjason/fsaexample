@@ -7,7 +7,7 @@ class Navbar extends React.Component {
         return (
             <ul className="pure-menu-list" ref={ref ? ref : ""}>
                 {this.props.navItems.map((item, index) => {
-                    return <NavItem to={item.to} key={index}>{item.name}</NavItem>
+                    return <NavItem to={item.to} icon={item.icon} key={index}>{item.name}</NavItem>
                 })}
             </ul>
         );
@@ -34,7 +34,8 @@ Navbar.propTypes = {
     navItems: React.PropTypes.arrayOf(
         React.PropTypes.shape({
             name: React.PropTypes.string.isRequired,
-            to: React.PropTypes.string.isRequired
+            to: React.PropTypes.string.isRequired,
+            icon: React.PropTypes.string
         }).isRequired
     ).isRequired
 };

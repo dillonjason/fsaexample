@@ -4,7 +4,7 @@ import LinkWithPanel from './link-with-panel'
 class LeftSideBar extends React.Component {
     render() {
         return (
-            <div className="left-side-bar">
+            <div className="left-side-bar-container">
                 {this.props.title &&
                     <div className="title">{this.props.title}</div>
                 }
